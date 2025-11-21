@@ -1,0 +1,130 @@
+/* src/styles/global.css (NOVA VERSÃO) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Paleta Dark Mode Centralizada e Suave (Inspired by modern dashboards) */
+  --primary-color: #4CAF50;     /* Verde Esmeralda (Ação, Tecnologia) */
+  --accent-color: #FFC107;      /* Amarelo Âmbar (Destaque/Aviso) */
+  --bg-dark: #0F172A;           /* Fundo Principal Muito Escuro (Navy/Black) */
+  --bg-card: #1E293B;           /* Fundo dos Cards/Seções */
+  --text-primary: #F8FAFC;      /* Texto Branco Sujo Suave */
+  --text-secondary: #94A3B8;    /* Texto Secundário/Detalhe */
+  --border-color: #334155;      /* Cor da Borda/Divisor */
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* CENTRALIZAÇÃO E ESTRUTURA GERAL */
+/* ---------------------------------- */
+
+.anteprojeto-container {
+    /* Garante que o conteúdo da página Anteprojeto fique centralizado na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.pap-section {
+    max-width: 1000px; /* Largura reduzida para melhor leitura */
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center; /* Centraliza o conteúdo dentro da seção */
+    margin: 0 auto;
+    
+    /* ANIMAÇÃO: Fade-in sutil ao carregar a seção */
+    animation: fadeIn 1s ease-out;
+}
+
+/* ---------------------------------- */
+/* TIPOGRAFIA E ESTILOS DE ELEMENTOS */
+/* ---------------------------------- */
+
+.section-title {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.2em;
+  display: inline-block; /* Para centralizar o título e a linha */
+}
+
+h3 {
+    color: var(--text-primary);
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 15px;
+    text-align: left; /* Títulos internos alinhados à esquerda para melhor leitura */
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px; /* Bordas mais arredondadas */
+  margin: 20px auto; /* Centraliza o card */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+  text-align: left; /* O conteúdo do card deve ser alinhado à esquerda */
+
+  /* ANIMAÇÃO: Hover Lift */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px var(--primary-color);
+}
+
+/* Listas customizadas (Melhoradas) */
+ul {
+  padding-left: 20px;
+  list-style: disc;
+  color: var(--text-secondary);
+}
+
+ul li {
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+ul li::marker {
+    color: var(--primary-color); /* Cor dos marcadores */
+    font-size: 1.2em;
+}
+
+/* Separador horizontal */
+.section-divider {
+    width: 80%; /* Linha mais curta e centralizada */
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px auto;
+}
+
+/* ---------------------------------- */
+/* ANIMAÇÕES */
+/* ---------------------------------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,72 @@
+/* src/styles/sections/tabela.css (NOVA VERSÃO COM PROPORÇÕES CORRIGIDAS) */
+
+/* Estilo da Tabela */
+.planning-table-container table {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
+  overflow: hidden; 
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Larguras Proporcionais para Equilíbrio Visual */
+.planning-table-container thead th:nth-child(1) { width: 25%; } /* Categoria */
+.planning-table-container thead th:nth-child(2) { width: 25%; } /* Tecnologia/Ferramenta */
+.planning-table-container thead th:nth-child(3) { width: 50%; } /* Justificação (Ocupa o resto do espaço) */
+
+
+.planning-table-container th, 
+.planning-table-container td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.planning-table-container thead th {
+  background-color: var(--primary-color);
+  color: var(--bg-dark); 
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.planning-table-container tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.planning-table-container tbody tr:nth-child(even) {
+    background-color: #1a2333; 
+}
+
+.planning-table-container tbody tr:hover {
+    background-color: #2a3447; 
+}
+
+.planning-table-container tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsividade (Para dispositivos móveis) */
+@media screen and (max-width: 768px) {
+  /* ... (Manter o código de responsividade aqui) ... */
+  .planning-table-container table, 
+  .planning-table-container thead, 
+  .planning-table-container tbody, 
+  .planning-table-container th, 
+  .planning-table-container td, 
+  .planning-table-container tr {
+    display: block;
+  }
+  
+  .planning-table-container thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  /* ... (Resto do código responsivo) ... */
+  .planning-table-container td:before {
+    /* ... */
+    color: var(--accent-color); 
+  }
+}

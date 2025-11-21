@@ -1,0 +1,60 @@
+/* src/styles/sections/header.css (NOVA VERSÃO COM CENTRALIZAÇÃO CORRIGIDA) */
+
+.pap-header {
+    background-color: #0d0d0d; /* Fundo escuro */
+    padding: 60px 20px;
+    text-align: center; /* Garante que os H1 e H2 estão centrados */
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.pap-header h1 {
+    font-size: 3em;
+    color: var(--primary-color); /* Cor verde esmeralda */
+    margin-bottom: 10px;
+}
+
+.pap-header h2 {
+    font-size: 1.8em;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.pap-header .subtitle {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------- */
+/* CORREÇÃO DE CENTRALIZAÇÃO */
+/* ---------------------------------- */
+
+.header-info-block {
+    /* Usar Flexbox para centralizar e garantir espaçamento igual */
+    display: flex;
+    justify-content: center; /* Centraliza o bloco inteiro de informações */
+    gap: 40px;
+    font-size: 0.95em;
+    color: var(--text-secondary);
+    max-width: 800px; /* Adiciona um limite para o bloco em telas muito largas */
+    margin: 20px auto 0; /* Centraliza o bloco de informações dentro do Header */
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-info-block span strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsividade básica para o cabeçalho */
+@media (max-width: 768px) {
+    .pap-header h1 {
+        font-size: 2em;
+    }
+    .header-info-block {
+        flex-direction: column; /* Pilha vertical em telas pequenas */
+        gap: 10px;
+    }
+}
