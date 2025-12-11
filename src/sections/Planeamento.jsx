@@ -21,6 +21,10 @@ function Planeamento() {
     "✅ Instalação e Configuração dos Sistemas Braver e Blender.",
     "✅ Configuração do Ambiente de Desenvolvimento (React, Node.js).",
     "✅ Documentação inicial de requisitos e brainstorming do conceito.",
+    "✅ Criação do repositório Git e configuração do CI/CD.",
+    "✅ Pesquisa preliminar sobre assistentes 3D e tecnologias relacionadas.",
+    " X projeto em pausa devida doencas ",
+    
   ];
 
   return (
